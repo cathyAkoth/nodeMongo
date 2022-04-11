@@ -194,16 +194,16 @@ const multerInstance = require('../multer')
  *         description: Some server error
  */
   
-  var storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, 'public/images');
-    },
-    filename: (req, file, cb) => {
-        cb(null, file.originalname);
-    }
-    });
-    var upload = multer({ storage: storage })
-  router.post("/", upload.single('image'), candidateController.createCandidate);
+  // var storage = multer.diskStorage({
+  //   destination: (req, file, cb) => {
+  //       cb(null, 'public/images');
+  //   },
+  //   filename: (req, file, cb) => {
+  //       cb(null, file.originalname);
+  //   }
+  //   });
+  //   var upload = multer({ storage: storage })
+  // router.post("/", upload.single('image'), candidateController.createCandidate);
 
   // const storage = multer.diskStorage({
   //   destination: (req, file, cb) => { cb(null, 'public/images') },
@@ -215,7 +215,7 @@ const multerInstance = require('../multer')
     
   //   router.post("/", upload.fields([
   //     { name: "image", maxCount: 1 },
-  //     { name: "fil", maxCount: 1 },]), candidateController.createCandidate);
+  //     { name: "passportUpload", maxCount: 1 },]), candidateController.createCandidate);
 
 
   // const storage = multer.diskStorage({

@@ -14,6 +14,7 @@ exports.createCandidate = async (req, res) => {
             phoneNumber: req.body.phoneNumber,
 
             price: req.body.price,
+            passportUpload:req.file.path,
             image: req.file.path,
            
             
